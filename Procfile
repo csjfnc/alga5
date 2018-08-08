@@ -1,2 +1,1 @@
-web: java $JAVA_OPTS -Dserver.port=$PORT -jar target/*.jar
---spring.config.location=classpath:application-prod.properties
+web: java -Dserver.port=$PORT -Dspring.profiles.active=prod,oauth-security $JAVA_OPTS -jar target/algamoney5*.jar
