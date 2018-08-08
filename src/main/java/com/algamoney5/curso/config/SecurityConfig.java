@@ -16,7 +16,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @Configuration
 @EnableWebSecurity
 @Order(4)
-
 public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	
 	
