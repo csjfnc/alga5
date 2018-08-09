@@ -24,7 +24,7 @@ public class CategoriaService {
 	
 	//BUSCA CATEGORIA PELO CODIGO
 	public Categoria buscarPeloCodigo(Long codigo){
-		Categoria categoria = categoriaRepository.findById(codigo).get();
+		Categoria categoria = categoriaRepository.getOne(codigo);
 		if(categoria == null){
 			throw new EmptyResultDataAccessException(1);
 		}		
