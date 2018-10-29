@@ -50,7 +50,7 @@ public class AlgaExceptionHandler extends ResponseEntityExceptionHandler{
 		return handleExceptionInternal(ex, erros, headers, httpStatus, request);
 	}
 
-	//rECEBE UM PACOTE DE ERROS E CRIA UMA LISTA
+	//RECEBE UM PACOTE DE ERROS E CRIA UMA LISTA
 	public List<Erro> criarListadeErros(BindingResult bindingResult){
 		List<Erro> erros = new ArrayList<>();
 		for(FieldError error : bindingResult.getFieldErrors()){

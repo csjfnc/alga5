@@ -8,7 +8,7 @@ public class GerarSenha {
 		
 		
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-		System.out.println(encoder.encode("@ngul@r0"));
+		System.out.println(encoder.encode("@angul@ar"));
 
 	}
 

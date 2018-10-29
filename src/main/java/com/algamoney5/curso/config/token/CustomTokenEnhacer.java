@@ -22,7 +22,6 @@ public class CustomTokenEnhacer implements TokenEnhancer {
 		
 		((DefaultOAuth2AccessToken) accessToken).setAdditionalInformation(addInfo);
 		
-		return accessToken ;
+		return accessToken;
 	}
-
 }

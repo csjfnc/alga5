@@ -19,13 +19,11 @@ public class PessoaService {
 	
 	public List<Pessoa> litarService(){
 		return pessoaRespository.findAll();
-	}
-	
+	}	
 	
 	public Pessoa criarService(Pessoa pessoa){
 		return pessoaRespository.save(pessoa);		
-	}
-	
+	}	
 	
 	public Pessoa atualizarService(Long codigo, Pessoa pessoa){
 		Pessoa pessoaBd = buscarpeloCodigo(codigo);
@@ -33,15 +31,13 @@ public class PessoaService {
 		return pessoaRespository.save(pessoaBd);
 	}
 
-
 	private Pessoa buscarpeloCodigo(Long codigo) {
 		Pessoa pessoa = pessoaRespository.findById(codigo).get();
 		if(pessoa == null){
 			throw new EmptyResultDataAccessException(1);
 		}
 		return pessoa;
-	}
-	
+	}	
 
 	public void remover(Long codigo){
 		pessoaRespository.deleteById(codigo);
